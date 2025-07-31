@@ -1,0 +1,56 @@
+#include "../header/BaseObject.h"
+
+void BaseObject::Teardown()
+{
+	DeleteGraph(drawHandle);
+	layer = Layer::INVALID;
+	transform.position = Vector2::zero();
+}
+
+bool BaseObject::IsSamePos(Vector2 pos)
+{
+	Transform worldTransform = transform.GetWorldTransform();
+	Vector2 position = worldTransform.position;
+	Vector2 scale = worldTransform.scale;
+
+	// ˆÊ’u‚ª“¯‚¶‚©‚Ç‚¤‚©
+	float posMinX = position.x - scale.x / 2;
+	float posMaxX = position.x + scale.x / 2;
+	float posMinY = position.y - scale.y / 2;
+	float posMaxY = position.y + scale.y / 2;
+	return (pos.x >= posMinX && pos.x <= posMaxX && pos.y >= posMinY && pos.y <= posMaxY);
+}
+
+bool BaseObject::IsSameRect(Vector2 pos, Vector2 size)
+{
+	Transform worldTransform = transform.GetWorldTransform();
+	Vector2 position = worldTransform.position;
+	Vector2 scale = worldTransform.scale;
+
+	float left = pos.x - (size.x / 2);
+	float right = pos.x + (size.x / 2);
+	if (left > right)
+	{
+		float temp = left;
+		left = right;
+		right = temp;
+	}
+	float up = pos.y - (size.y / 2);
+	float down = pos.y + (size.y / 2);
+	if (up < down)
+	{
+		float temp = up;
+		up = down;
+		down = temp;
+	}
+
+	float posMinX = position.x - scale.x / 2;
+	float posMaxX = position.x + scale.x / 2;
+	float posMinY = position.y - scale.y / 2;
+	float posMaxY = position.y + scale.y / 2;
+
+	bool xSame = (posMinX > left && right > posMinX) || (posMaxX > left && right > posMaxX);
+	bool ySame = (posMinY > down && up > posMinY) || (posMaxY > down && up > posMaxY);
+
+	return xSame && ySame;
+}
