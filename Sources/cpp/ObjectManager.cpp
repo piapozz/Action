@@ -41,7 +41,7 @@ void ObjectManager::Draw()
 {
 	// ‰æ–Ê‚ÌƒNƒŠƒA
 	ClearDrawScreen();
-	clsDx ();
+	clsDx();
 	ForEachObject([](BaseObject* obj) {
 		if (obj->GetTransform().IsChild()) return;
 		obj->Draw();
@@ -150,7 +150,7 @@ std::vector<BaseObject*> ObjectManager::FindPosAllObject(Vector2 pos, ObjectType
 		{
 			if (obj == nullptr) continue;
 			if (!obj->GetActive() || !obj->GetInteract()) continue;
-			if (obj->IsSamePos(pos))
+			if (IsSamePos(obj->GetTransform().GetWorldTransform(), pos))
 			{
 				objs.push_back(obj);
 			}
@@ -167,7 +167,7 @@ BaseObject* ObjectManager::FindPosObject(Vector2 pos, ObjectType type)
 		{
 			if (obj == nullptr) continue;
 			if (!obj->GetActive() || !obj->GetInteract()) continue;
-			if (obj->IsSamePos(pos))
+			if (IsSamePos(obj->GetTransform().GetWorldTransform(), pos))
 			{
 				return obj;
 			}
@@ -185,7 +185,7 @@ std::vector<BaseObject*> ObjectManager::FindRectAllObject(Vector2 pos, Vector2 s
 		{
 			if (obj == nullptr) continue;
 			if (!obj->GetActive() || !obj->GetInteract()) continue;
-			if (obj->IsSameRect(pos, size))
+			if (IsSamePos(obj->GetTransform().GetWorldTransform(), pos))
 			{
 				objs.push_back(obj);
 			}
