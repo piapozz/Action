@@ -18,6 +18,52 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\cpp\AudioManager.cpp" />
+    <ClCompile Include="Sources\cpp\BaseObject.cpp" />
+    <ClCompile Include="Sources\cpp\BaseScene.cpp" />
+    <ClCompile Include="Sources\cpp\BaseUIScreen.cpp" />
+    <ClCompile Include="Sources\cpp\Camera.cpp" />
+    <ClCompile Include="Sources\cpp\CommonModule.cpp" />
+    <ClCompile Include="Sources\cpp\Cursor.cpp" />
+    <ClCompile Include="Sources\cpp\GameManager.cpp" />
+    <ClCompile Include="Sources\cpp\InputManager.cpp" />
+    <ClCompile Include="Sources\cpp\Main.cpp" />
+    <ClCompile Include="Sources\cpp\ObjectManager.cpp" />
+    <ClCompile Include="Sources\cpp\SceneMain.cpp" />
+    <ClCompile Include="Sources\cpp\SceneManager.cpp" />
+    <ClCompile Include="Sources\cpp\SceneResult.cpp" />
+    <ClCompile Include="Sources\cpp\SceneTitle.cpp" />
+    <ClCompile Include="Sources\cpp\UIManager.cpp" />
+    <ClCompile Include="Sources\cpp\UIScreenButton.cpp" />
+    <ClCompile Include="Sources\cpp\UIScreenImage.cpp" />
+    <ClCompile Include="Sources\cpp\UIScreenSlider.cpp" />
+    <ClCompile Include="Sources\cpp\UIScreenText.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\header\AudioManager.h" />
+    <ClInclude Include="Sources\header\BaseObject.h" />
+    <ClInclude Include="Sources\header\BaseScene.h" />
+    <ClInclude Include="Sources\header\BaseUIScreen.h" />
+    <ClInclude Include="Sources\header\Camera.h" />
+    <ClInclude Include="Sources\header\CommonModule.h" />
+    <ClInclude Include="Sources\header\Const.h" />
+    <ClInclude Include="Sources\header\Cursor.h" />
+    <ClInclude Include="Sources\header\GameManager.h" />
+    <ClInclude Include="Sources\header\InputManager.h" />
+    <ClInclude Include="Sources\header\ObjectFactory.h" />
+    <ClInclude Include="Sources\header\ObjectManager.h" />
+    <ClInclude Include="Sources\header\SceneMain.h" />
+    <ClInclude Include="Sources\header\SceneManager.h" />
+    <ClInclude Include="Sources\header\SceneResult.h" />
+    <ClInclude Include="Sources\header\SceneTitle.h" />
+    <ClInclude Include="Sources\header\UIManager.h" />
+    <ClInclude Include="Sources\header\UIScreen.h" />
+    <ClInclude Include="Sources\header\UIScreenButton.h" />
+    <ClInclude Include="Sources\header\UIScreenImage.h" />
+    <ClInclude Include="Sources\header\UIScreenSlider.h" />
+    <ClInclude Include="Sources\header\UIScreenText.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

@@ -1,7 +1,6 @@
 #include "../header/ObjectManager.h"
 #include "../header/BaseObject.h"
 #include "../header/ObjectFactory.h"
-#include "../header/MemoryAllocator.h"
 
 void ObjectManager::Init()
 {

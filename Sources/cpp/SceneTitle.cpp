@@ -34,7 +34,7 @@ void SceneTitle::Init()
 
 	LayerSetting layer = {true, false, Layer::MIDDLE};
 	UIScreenText* uiTitle = ObjectFactory::Instance().CreateWithArgs<UIScreenText>(Transform(TITLE_POS, TITLE_SIZE), LayerSetting{true, false, Layer::MIDDLE});
-	uiTitle->SetText("Absolute");
+	uiTitle->SetText("Action");
 	uiTitle->SetFontSize(TITLE_FONT_SIZE);
 
 	//trans = Transform(CONTINUE_POS, CONTINUE_SIZE);

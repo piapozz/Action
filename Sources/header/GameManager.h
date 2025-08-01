@@ -1,6 +1,7 @@
 #pragma once
 #include "DxLib.h"
-#include "../header/PhaseManager.h"
+#include <functional>
+#include "Const.h"
 
 /*
  * Sein
@@ -20,6 +21,5 @@ public:
 	inline void SetChangeSceneCallback(std::function<void(SceneName)> setCallback){ _ChangeScene = setCallback; };
 
 private:
-	PhaseManager* _pPhaseManager;
 	std::function<void(SceneName)> _ChangeScene;
 };
