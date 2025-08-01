@@ -1,12 +1,11 @@
 #pragma once
 #include "../header/CommonModule.h"
 #include "../header/Const.h"
-#include "../header/AutoTypeNameObject.h"
 /*
 * Ishihara
 * オブジェクトの基底
 */
-class BaseObject : public AutoTypeNameObject
+class BaseObject
 {
 public:
 	size_t poolIndex = 0;
