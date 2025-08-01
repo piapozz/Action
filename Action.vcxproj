@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\cpp\AudioManager.cpp" />
+    <ClCompile Include="Sources\cpp\BaseCharacter.cpp" />
     <ClCompile Include="Sources\cpp\BaseObject.cpp" />
     <ClCompile Include="Sources\cpp\BaseScene.cpp" />
     <ClCompile Include="Sources\cpp\BaseUIScreen.cpp" />
@@ -42,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sources\header\AudioManager.h" />
+    <ClInclude Include="Sources\header\BaseCharacter.h" />
     <ClInclude Include="Sources\header\BaseObject.h" />
     <ClInclude Include="Sources\header\BaseScene.h" />
     <ClInclude Include="Sources\header\BaseUIScreen.h" />
